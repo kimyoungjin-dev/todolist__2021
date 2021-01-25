@@ -1,37 +1,35 @@
 import React, { useEffect, useState } from "react";
 
 const Greeting = () => {
-  const [value, setValue] = useState("");
-  const [currentUser, setCurrentUser] = useState("");
+  const [text, setText] = useState("");
 
-  useEffect(() => {
-    setCurrentUser(localStorage.getItem("currentUser"));
-  }, []);
+  const user = localStorage.getItem("currentUser", text);
 
   const onChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setValue(value);
+    setText(event.target.value);
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    setValue("");
-    localStorage.setItem("currentUser", value);
-    setCurrentUser(true);
+    localStorage.setItem("currentUser", text);
+    setText("");
   };
 
   return (
     <>
-      {!currentUser ? (
+      {!user ? (
         <form onSubmit={onSubmit}>
-          <input type="text" onChange={onChange} value={value} />
+          <input
+            type="text"
+            onChange={onChange}
+            value={text}
+            placeholder="USER"
+          />
           <input type="submit" value="확인" />
         </form>
       ) : (
         <div>
-          <h1>{localStorage.getItem("currentUser")}</h1>
+          <h1>"{user}"님 안녕하세요!</h1>
         </div>
       )}
     </>
