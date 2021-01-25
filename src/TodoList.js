@@ -1,14 +1,26 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import "./TodoList.css";
 
-const Todolist = ({ todos }) => {
+const TodoList = ({
+  toggleEditing,
+  todos,
+  checkChange,
+  chooseSelectedTodo,
+}) => {
   return (
     <div>
       {todos.map((todo) => (
-        <TodoItem todo={todo} key={todo.id} />
+        <TodoItem
+          toggleEditing={toggleEditing}
+          chooseSelectedTodo={chooseSelectedTodo}
+          checkChange={checkChange}
+          todo={todo}
+          key={todo.id}
+        />
       ))}
     </div>
   );
 };
 
-export default Todolist;
+export default TodoList;
