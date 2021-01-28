@@ -4,6 +4,9 @@ import Greeting from "./Greeting";
 import Todo from "./Todo";
 import Weather from "./Weather";
 import Bg from "./Bg";
+import "./styles.css";
+import "./Weather.css";
+import "./status-bar.css";
 
 const App = () => {
   return (
@@ -11,9 +14,9 @@ const App = () => {
       <div>
         <Bg />
         <Weather />
-        <Greeting />
-        <Clock />
         <Todo />
+        <Clock />
+        <Greeting />
       </div>
     </>
   );
