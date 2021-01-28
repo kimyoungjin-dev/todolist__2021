@@ -1,11 +1,10 @@
+//import
 import React, { useState } from "react";
 import TodoList from "./TodoList";
 import TodoTitle from "./TodoTitle";
 import TodoInsert from "./TodoInsert";
-import { FaCheck } from "react-icons/fa";
-
-import "./Todo.css";
-
+import { BiMessageRoundedCheck } from "react-icons/bi";
+//css
 let nextId = 4;
 
 const Todo = () => {
@@ -75,7 +74,7 @@ const Todo = () => {
   };
   return (
     <>
-      <div>
+      <div className="Todo__container">
         <TodoTitle todosLength={todos.length} />
         <TodoInsert
           updateTodo={updateTodo}
@@ -98,7 +97,7 @@ const Todo = () => {
         }}
         className="plus__button"
       >
-        <FaCheck />
+        <BiMessageRoundedCheck />
       </div>
     </>
   );
