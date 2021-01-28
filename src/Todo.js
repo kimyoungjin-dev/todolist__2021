@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TodoList from "./TodoList";
 import TodoTitle from "./TodoTitle";
 import TodoInsert from "./TodoInsert";
-import { FaPlusCircle } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 
 import "./Todo.css";
 
@@ -98,7 +98,7 @@ const Todo = () => {
         }}
         className="plus__button"
       >
-        <FaPlusCircle />
+        <FaCheck />
       </div>
     </>
   );
