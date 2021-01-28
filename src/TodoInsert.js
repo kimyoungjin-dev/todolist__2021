@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HiPencilAlt } from "react-icons/hi";
 import { HiPencil } from "react-icons/hi";
-import { BsTrash } from "react-icons/bs";
+import { BsTrash, BsCardChecklist } from "react-icons/bs";
 
 const TodoInsert = ({
   updateTodo,
@@ -57,7 +57,7 @@ const TodoInsert = ({
           <input
             value={value}
             type="text"
-            placeholder="할일을 입력하세요"
+            placeholder="Check LIST"
             maxLength={50}
             onChange={onChange}
           />
