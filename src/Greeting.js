@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Greeting = () => {
   const [text, setText] = useState("");
@@ -17,21 +17,23 @@ const Greeting = () => {
 
   return (
     <>
-      {!user ? (
-        <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            onChange={onChange}
-            value={text}
-            placeholder="USER"
-          />
-          <input type="submit" value="확인" />
-        </form>
-      ) : (
-        <div>
-          <h1>"{user}"님 안녕하세요!</h1>
-        </div>
-      )}
+      <div className="Greeting">
+        {!user ? (
+          <form onSubmit={onSubmit}>
+            <input
+              type="text"
+              onChange={onChange}
+              value={text}
+              placeholder="USER"
+            />
+            <input type="submit" value="확인" />
+          </form>
+        ) : (
+          <div>
+            <h1>Hello ! {user}</h1>
+          </div>
+        )}
+      </div>
     </>
   );
 };
