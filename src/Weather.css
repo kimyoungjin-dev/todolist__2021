@@ -1,0 +1,81 @@
+/*weather loading*/
+
+.WeatherLoading {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.WeatherLoading__background__Image {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY();
+  }
+  to {
+    opacity: 3;
+    transform: none;
+  }
+}
+
+.WeatherLoading__title {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  font-size: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* weather main */
+
+.WeatherInfo {
+  box-shadow: 0 13px 27px -5px white, 0 8px 16px -8px white,
+    0 -6px 16px -6px white;
+  color: white;
+  position: fixed;
+  top: 5%;
+  left: 10%;
+  height: 270px;
+  width: 200px;
+  opacity: 0.6;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.WeatherInfo__condition {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.WeatherInfo__condition svg {
+  margin-top: 15px;
+}
+
+.WeatherInfo__temperature {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 10px 0px;
+}

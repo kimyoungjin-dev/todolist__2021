@@ -1,0 +1,17 @@
+.WeatherInfo__status {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 2rem;
+  color: white;
+}
+
+.WeatherInfo__status span:first-child {
+  opacity: 0.5;
+}
+
+.WeatherInfo__status span:last-child {
+  margin-right: 30px;
+  font-size: 5rem;
+}
