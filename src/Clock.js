@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Clock = () => {
-  const [clock, setClock] = useState("현재시간을 로드중입니다");
+  const [clock, setClock] = useState();
 
   const getTime = () => {
     const date = new Date();
@@ -21,7 +21,7 @@ const Clock = () => {
     }, 1000);
   }, [clock]);
 
-  return <div>{clock}</div>;
+  return <div className="Clock">{clock}</div>;
 };
 
 export default Clock;
