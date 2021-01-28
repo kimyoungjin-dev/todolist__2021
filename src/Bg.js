@@ -1,17 +1,27 @@
 import React from "react";
-import image1 from "./images/image1.jpeg";
-import image2 from "./images/image2.jpeg";
-import image3 from "./images/image3.jpeg";
-import image4 from "./images/image4.jpeg";
-import image5 from "./images/image5.jpeg";
+import image2 from "./images/image2.webp";
+import image3 from "./images/image3.webp";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { GiStripedSun } from "react-icons/gi";
 
 const Bg = () => {
   const number = Math.floor(Math.random() * 5 + 1);
-  const randomNumber = number === 1 ? image4 : image2;
+  const randomNumber = number === 1 ? image2 : image3;
+
   return (
-    <div className="backgroundImage">
-      <img src={randomNumber} />
-    </div>
+    <>
+      <div className="bg">
+        <img className="backgroundImage__image" src={randomNumber} />
+      </div>
+      <div className="WeatherInfo__status">
+        <span>
+          <GiHamburgerMenu />
+        </span>
+        <span>
+          <GiStripedSun />
+        </span>
+      </div>
+    </>
   );
 };
 
