@@ -1,5 +1,4 @@
 import React from "react";
-import "./TodoItem.css";
 import { ImCheckboxChecked, ImCheckboxUnchecked } from "react-icons/im";
 
 const TodoItem = ({ todo, checkChange, toggleEditing, chooseSelectedTodo }) => {
@@ -8,11 +7,7 @@ const TodoItem = ({ todo, checkChange, toggleEditing, chooseSelectedTodo }) => {
   return (
     <div className={`contents ${checked ? "checked" : ""}`}>
       {checked ? (
-        <ImCheckboxChecked
-          onClick={() => {
-            checkChange(id);
-          }}
-        />
+        <ImCheckboxChecked onClick={() => checkChange(id)} />
       ) : (
         <ImCheckboxUnchecked
           onClick={() => {

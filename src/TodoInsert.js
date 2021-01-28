@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./TodoInsert.css";
 import { HiPencilAlt } from "react-icons/hi";
 import { HiPencil } from "react-icons/hi";
 import { BsTrash } from "react-icons/bs";
